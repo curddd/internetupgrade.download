@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="data">!!!DATA!!!</div>
+        <script src="browser_js/capsules/capsule.js"></script>
+        <script>
+            const uuid = !!!uuid!!!;
+            window.addEventListener("message", loadJS);
+            function loadJS(e){
+                if(e.data.op == 'INJECT'){
+                    window.removeEventListener("message", loadJS);
+                    eval(e.data.payload);
+                }
+            }
+        </script>
+    </body>
+</html>

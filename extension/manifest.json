@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "internet upgrade",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["chat.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": ["activeTab", "tabs", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "config.html"
+  }
+}

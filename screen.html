@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="screen-holder" style="width:100%;height:100%"></div>
+
+        <script src="browser_js/lib/sha.js"></script>
+        <script src="browser_js/lib/auto_capsule.js"></script>
+
+        <script src="browser_js/identity.js"></script>
+
+        <script src="browser_js/database.js"></script>
+        <script src="browser_js/storage.js"></script>
+        <script src="browser_js/screen.js"></script>
+        <script src="browser_js/capsules/capsule.js"></script>
+
+
+        <script src="browser_js/net/sockets.js"></script>
+        <script src="browser_js/net/swarm.js"></script>
+        <script src="browser_js/net/websocket.js"></script>
+        <script src="browser_js/lib/ppoverweb.js"></script>
+        <script src="browser_js/net/webrtc.js"></script>
+        <script src="browser_js/net/publisher.js"></script>
+        <script>
+            window.publisher = publisher;
+            const screen_uuid = (Math.random() + 1).toString(36).substring(2);
+        console.log("_???",screen_uuid)
+        </script>
+    </body>
+</html>
